@@ -13,7 +13,7 @@ server.get("/api/timestamp/:date_string", (req, res) => {
     let dateInput;
     if (dateString.indexOf("-") >= 0) {
         dateInput = new Date(dateString);
-    } else if (dateString !== "") {
+    } else if (dateString === "") {
         dateInput = new Date();
     } else {
         dateInput = new Date(Number(dateString));
